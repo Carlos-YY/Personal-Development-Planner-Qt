@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1180</width><height>760</height></rect></property>
+  <property name="windowTitle"><string>个人发展规划系统</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+    <property name="spacing"><number>0</number></property>
+    <property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+    <item>
+     <widget class="QFrame" name="leftPanel">
+      <property name="minimumSize"><size><width>230</width><height>0</height></size></property>
+      <property name="maximumSize"><size><width>230</width><height>16777215</height></size></property>
+      <layout class="QVBoxLayout" name="sidebarLayout">
+       <property name="leftMargin"><number>18</number></property><property name="topMargin"><number>28</number></property><property name="rightMargin"><number>18</number></property><property name="bottomMargin"><number>18</number></property>
+       <item><widget class="QLabel" name="brandTitle"><property name="text"><string>Curriculum Vitae</string></property></widget></item>
+       <item><widget class="QLabel" name="brandSubTitle"><property name="text"><string>四年成长档案 · Qt版</string></property></widget></item>
+       <item><spacer name="spacerTop"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>22</height></size></property></spacer></item>
+       <item><widget class="QPushButton" name="btnDashboard"><property name="text"><string>  首页总览</string></property><property name="nav" stdset="0"><string>true</string></property></widget></item>
+       <item><widget class="QPushButton" name="btnCourses"><property name="text"><string>  课程与GPA</string></property><property name="nav" stdset="0"><string>true</string></property></widget></item>
+       <item><widget class="QPushButton" name="btnExperience"><property name="text"><string>  项目/竞赛/实习</string></property><property name="nav" stdset="0"><string>true</string></property></widget></item>
+       <item><widget class="QPushButton" name="btnAchievement"><property name="text"><string>  成就与角色</string></property><property name="nav" stdset="0"><string>true</string></property></widget></item>
+       <item><widget class="QPushButton" name="btnResume"><property name="text"><string>  简历导出</string></property><property name="nav" stdset="0"><string>true</string></property></widget></item>
+       <item><spacer name="spacerMiddle"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>280</height></size></property></spacer></item>
+       <item><widget class="QPushButton" name="btnDemo"><property name="text"><string>载入演示数据</string></property><property name="primary" stdset="0"><string>true</string></property></widget></item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="pages">
+      <property name="currentIndex"><number>0</number></property>
+      <widget class="QWidget" name="dashboardPage">
+       <layout class="QVBoxLayout" name="dashboardLayout"><property name="leftMargin"><number>28</number></property><property name="topMargin"><number>24</number></property><property name="rightMargin"><number>28</number></property><property name="bottomMargin"><number>24</number></property>
+        <item><widget class="QLabel" name="titleDashboard"><property name="text"><string>首页总览</string></property><property name="pageTitle" stdset="0"><string>true</string></property></widget></item>
+        <item>
+         <layout class="QGridLayout" name="profileGrid">
+          <item row="0" column="0"><widget class="QLabel" name="lblName"><property name="text"><string>姓名</string></property></widget></item>
+          <item row="0" column="1"><widget class="QLineEdit" name="editName"/></item>
+          <item row="0" column="2"><widget class="QLabel" name="lblSchool"><property name="text"><string>学校</string></property></widget></item>
+          <item row="0" column="3"><widget class="QLineEdit" name="editSchool"/></item>
+          <item row="1" column="0"><widget class="QLabel" name="lblMajor"><property name="text"><string>专业</string></property></widget></item>
+          <item row="1" column="1"><widget class="QLineEdit" name="editMajor"/></item>
+          <item row="1" column="2"><widget class="QLabel" name="lblGoal"><property name="text"><string>发展方向</string></property></widget></item>
+          <item row="1" column="3"><widget class="QLineEdit" name="editGoal"/></item>
+          <item row="2" column="0"><widget class="QLabel" name="lblEmail"><property name="text"><string>邮箱</string></property></widget></item>
+          <item row="2" column="1" colspan="3"><widget class="QLineEdit" name="editEmail"/></item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="cardLayout">
+          <item><widget class="QLabel" name="labelGpa"><property name="text"><string>GPA
+0.00</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="card" stdset="0"><string>true</string></property></widget></item>
+          <item><widget class="QLabel" name="labelCredits"><property name="text"><string>累计学分
+0</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="card" stdset="0"><string>true</string></property></widget></item>
+          <item><widget class="QLabel" name="labelExperienceCount"><property name="text"><string>经历数量
+0</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="card" stdset="0"><string>true</string></property></widget></item>
+          <item><widget class="QLabel" name="labelAchievementCount"><property name="text"><string>成就记录
+0</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="card" stdset="0"><string>true</string></property></widget></item>
+         </layout>
+        </item>
+        <item><widget class="QLabel" name="labelAdvice"><property name="minimumSize"><size><width>0</width><height>90</height></size></property><property name="wordWrap"><bool>true</bool></property><property name="text"><string>成长画像分析：</string></property><property name="card" stdset="0"><string>true</string></property></widget></item>
+        <item><layout class="QHBoxLayout" name="fileButtonLayout"><item><widget class="QPushButton" name="btnSaveData"><property name="text"><string>保存数据</string></property><property name="primary" stdset="0"><string>true</string></property></widget></item><item><widget class="QPushButton" name="btnLoadData"><property name="text"><string>导入数据</string></property></widget></item><item><spacer name="fileBtnSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item></layout></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="coursePage">
+       <layout class="QVBoxLayout" name="courseLayout"><property name="leftMargin"><number>28</number></property><property name="topMargin"><number>24</number></property><property name="rightMargin"><number>28</number></property><property name="bottomMargin"><number>24</number></property>
+        <item><widget class="QLabel" name="titleCourse"><property name="text"><string>课程记录与 GPA 计算</string></property><property name="pageTitle" stdset="0"><string>true</string></property></widget></item>
+        <item><layout class="QHBoxLayout" name="courseInput"><item><widget class="QLineEdit" name="editSemester"><property name="placeholderText"><string>学期，如：大一春季</string></property></widget></item><item><widget class="QLineEdit" name="editCourseName"><property name="placeholderText"><string>课程名称</string></property></widget></item><item><widget class="QDoubleSpinBox" name="spinCredit"><property name="decimals"><number>1</number></property><property name="maximum"><double>20.000000000000000</double></property><property name="value"><double>3.000000000000000</double></property></widget></item><item><widget class="QDoubleSpinBox" name="spinScore"><property name="maximum"><double>100.000000000000000</double></property><property name="value"><double>85.000000000000000</double></property></widget></item><item><widget class="QPushButton" name="btnAddCourse"><property name="text"><string>添加课程</string></property><property name="primary" stdset="0"><string>true</string></property></widget></item><item><widget class="QPushButton" name="btnRemoveCourse"><property name="text"><string>删除选中</string></property></widget></item></layout></item>
+        <item><widget class="QTableWidget" name="courseTable"/></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="experiencePage">
+       <layout class="QVBoxLayout" name="expLayout"><property name="leftMargin"><number>28</number></property><property name="topMargin"><number>24</number></property><property name="rightMargin"><number>28</number></property><property name="bottomMargin"><number>24</number></property>
+        <item><widget class="QLabel" name="titleExp"><property name="text"><string>项目 / 竞赛 / 实习经历</string></property><property name="pageTitle" stdset="0"><string>true</string></property></widget></item>
+        <item><layout class="QGridLayout" name="expInput"><item row="0" column="0"><widget class="QComboBox" name="comboExpType"><item><property name="text"><string>项目</string></property></item><item><property name="text"><string>竞赛</string></property></item><item><property name="text"><string>实习</string></property></item><item><property name="text"><string>课外活动</string></property></item></widget></item><item row="0" column="1"><widget class="QLineEdit" name="editExpTitle"><property name="placeholderText"><string>经历名称</string></property></widget></item><item row="0" column="2"><widget class="QLineEdit" name="editExpRole"><property name="placeholderText"><string>担任角色</string></property></widget></item><item row="0" column="3"><widget class="QDateEdit" name="dateExpStart"><property name="calendarPopup"><bool>true</bool></property></widget></item><item row="0" column="4"><widget class="QDateEdit" name="dateExpEnd"><property name="calendarPopup"><bool>true</bool></property></widget></item><item row="1" column="0" colspan="4"><widget class="QTextEdit" name="textExpDesc"><property name="placeholderText"><string>简要说明：做了什么、负责什么、有什么结果</string></property><property name="maximumSize"><size><width>16777215</width><height>85</height></size></property></widget></item><item row="1" column="4"><layout class="QVBoxLayout" name="expButtons"><item><widget class="QPushButton" name="btnAddExperience"><property name="text"><string>添加经历</string></property><property name="primary" stdset="0"><string>true</string></property></widget></item><item><widget class="QPushButton" name="btnRemoveExperience"><property name="text"><string>删除选中</string></property></widget></item></layout></item></layout></item>
+        <item><widget class="QTableWidget" name="experienceTable"/></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="achievementPage">
+       <layout class="QVBoxLayout" name="achLayout"><property name="leftMargin"><number>28</number></property><property name="topMargin"><number>24</number></property><property name="rightMargin"><number>28</number></property><property name="bottomMargin"><number>24</number></property>
+        <item><widget class="QLabel" name="titleAch"><property name="text"><string>成就、奖项与担任角色</string></property><property name="pageTitle" stdset="0"><string>true</string></property></widget></item>
+        <item><layout class="QHBoxLayout" name="achInput"><item><widget class="QComboBox" name="comboAchievementType"><item><property name="text"><string>奖项</string></property></item><item><property name="text"><string>荣誉</string></property></item><item><property name="text"><string>角色</string></property></item><item><property name="text"><string>志愿服务</string></property></item></widget></item><item><widget class="QLineEdit" name="editAchievementTitle"><property name="placeholderText"><string>名称</string></property></widget></item><item><widget class="QDateEdit" name="dateAchievement"><property name="calendarPopup"><bool>true</bool></property></widget></item><item><widget class="QLineEdit" name="editAchievementLevel"><property name="placeholderText"><string>级别，如：校级/院级</string></property></widget></item><item><widget class="QLineEdit" name="editAchievementNote"><property name="placeholderText"><string>备注</string></property></widget></item><item><widget class="QPushButton" name="btnAddAchievement"><property name="text"><string>添加</string></property><property name="primary" stdset="0"><string>true</string></property></widget></item><item><widget class="QPushButton" name="btnRemoveAchievement"><property name="text"><string>删除选中</string></property></widget></item></layout></item>
+        <item><widget class="QTableWidget" name="achievementTable"/></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="resumePage">
+       <layout class="QVBoxLayout" name="resumeLayout"><property name="leftMargin"><number>28</number></property><property name="topMargin"><number>24</number></property><property name="rightMargin"><number>28</number></property><property name="bottomMargin"><number>24</number></property>
+        <item><widget class="QLabel" name="titleResume"><property name="text"><string>简历预览与导出</string></property><property name="pageTitle" stdset="0"><string>true</string></property></widget></item>
+        <item><widget class="QTextEdit" name="resumePreview"><property name="readOnly"><bool>true</bool></property></widget></item>
+        <item><layout class="QHBoxLayout" name="resumeButtons"><item><widget class="QPushButton" name="btnExportResume"><property name="text"><string>导出 Markdown 简历</string></property><property name="primary" stdset="0"><string>true</string></property></widget></item><item><spacer name="resumeSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item></layout></item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar"><property name="geometry"><rect><x>0</x><y>0</y><width>1180</width><height>24</height></rect></property><widget class="QMenu" name="menuFile"><property name="title"><string>文件</string></property><addaction name="actionOpen"/><addaction name="actionSave"/><addaction name="actionExportResume"/></widget><addaction name="menuFile"/></widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen"><property name="text"><string>导入数据</string></property></action>
+  <action name="actionSave"><property name="text"><string>保存数据</string></property></action>
+  <action name="actionExportResume"><property name="text"><string>导出简历</string></property></action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
